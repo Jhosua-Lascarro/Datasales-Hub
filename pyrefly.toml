@@ -1,0 +1,33 @@
+# Project files to include
+project-includes = ["src/**/*.py", "**/*.py"]
+
+# Project files to exclude
+project-excludes = [
+    "**/__pycache__",
+    "**/.venv/**",
+    "**/tests/**",    # Tests without strict typing
+    "**/docs/**",     # Documentation files
+]
+
+# Python configuration
+python-version = "3.14"
+python-platform = "auto"
+
+# Module search paths
+search-path = ["src", "."]
+
+# Type checking behavior
+untyped-def-behavior = "check-and-infer-return-type"
+ignore-errors-in-generated-code = true
+
+# Error detection rules
+[errors]
+bad-assignment = true
+invalid-argument = true
+
+# Test-specific configuration
+[[sub-config]]
+matches = "tests/**"
+
+[sub-config.errors]
+bad-return = false

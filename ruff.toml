@@ -1,0 +1,30 @@
+# General configuration
+line-length = 88
+target-version = "py314"
+
+# Excluded directories and files
+exclude = [
+    ".pytest_cache",
+    ".ruff_cache",
+    "__pycache__",
+    ".venv",
+    ".git",
+    "docs",
+]
+
+# Linting configuration
+[lint]
+select = ["ALL"]
+ignore = ["E501", "D"]
+fixable = ["ALL"]
+
+# Per-file rules
+[lint.per-file-ignores]
+"__init__.py" = ["E402"]
+"tests/**" = ["N"]
+
+# Format configuration
+[format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
