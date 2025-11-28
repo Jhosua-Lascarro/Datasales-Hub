@@ -15,7 +15,7 @@ exclude = [
 # Linting configuration
 [lint]
 select = ["ALL"]
-ignore = ["E501", "D"]
+ignore = ["E501", "D", "T201", "INP001"]
 fixable = ["ALL"]
 
 # Per-file rules
